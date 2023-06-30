@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --card_width: 250px;
+    --row_increment: 10px;
+    --card_border_radius: 16px;
+    --card_small: 26;
+    --card_med: 33;
+    --card_large: 45;
+}
+.navigation-bottom {
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 150%;
+    padding: 10px 10px;
+    background-color: #fff;
+
+}
+
+.navigation-top {
+    display: flex;
+    justify-content: left;
+    position: -webkit-sticky;
+    top: 95%;
+    gap: 10px;
+
+}
+
+.nav-left, .nav-right {
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 110%;
+}
+.nav-centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+}
+.navigation-bar-start {
+    padding: 10px 0;
+}
+.nav-centre .search {
+    width: 100%;
+    margin: auto;
+}
+.nav-centre  input {
+width: 95%;
+padding: 10px;
+border-radius: 10px;
+font-size: 110%;
+border: none;
+background-color: #dadada;
+padding-left: 45px;
+background-image: url("https://icon-library.com/images/search-button-icon-png/search-button-icon-png-14.jpg");
+background-size: 25px;
+background-repeat: no-repeat;
+background-position: 8px;
+}
+.logo i{
+    color: red;
+}
+.nav-centre i {
+    display: none;
+}
+input:active, input:focus {
+    outline: 3px solid rgba(0, 0, 255, 0.488);
+}
+.nav-centre {
+    background-color: #fff;
+}
+.navigation-bar-start {
+    position: fixed;
+    top: 0%; 
+    width: 100%;  
+    background-color: #fff;
+    z-index: 4;
+}
+.navigation-top .btn {
+    font-size: 80%;
+    background-color: #000;
+    padding: 8px;
+    color: white;
+    border-radius: 15px;
+}
+.notification {
+    background-color: #000;
+    color: white;
+    border-radius: 12px;
+    padding: 7px;
+    position: absolute;
+    left: 81%;
+    top: 6vh;
+    display: none;
+}
+.bell:hover .notification {
+    display: block;
+}
+.messsage {
+    background-color: #000;
+    color: white;
+    padding: 7px;
+    border-radius: 12px;
+    position: absolute;
+    top: 6vh;
+    left: 85%;
+    display: none;
+}
+.cmt:hover .messsage {
+    display: block;
+}
+.profile {
+    background-color: #000;
+    color: white;
+    padding: 7px;
+    border-radius: 12px;
+    position: absolute;
+    top: 6vh;
+    left: 87.5%;
+    display: none;
+}
+.myprofile:hover .profile {
+    display: block;
+}
+.down:hover .more {
+    display: block;
+}
+.more {
+    background-color: #000;
+    color: white;
+    width: 60px;
+    padding: 7px 15px;
+    border-radius: 15px;
+    position: absolute;
+    top: 6vh;
+    left: 91%;
+    display: none;
+}
+@media screen and (max-width:1000px) {
+    .navigation-top {
+        justify-content: space-between;
+    }
+    .btn {
+       display: none;
+    }
+    .nav-left {
+        width: 13%;
+    }
+    .nav-centre {
+        width: 60%;
+    }
+    .nav-right {
+        width: 17%;
+        margin-left: 10px;
+    }
+   }
+@media screen and (max-width:750px) {
+    .navigation-top {
+        justify-content: left;
+        padding: 10px 25px;
+    }
+    .nav-left, .nav-right {
+        width: 25%;
+    }
+    .nav-centre {
+        width: 3%;
+    }
+    .nav-centre i {
+        display: block;
+    }
+    .nav-centre .search  {
+        display: none;
+        width: 10%;
+    }
+    .question {
+        display: none;
+    }
+}
+.create .coption {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-left: -50px;
+    display: none;
+}
+.create:hover .coption {
+    display: block;
+}
+.create .coption ul li {
+    list-style: none;
+    padding: 5px 5px;
+    font-size: 120%;
+    border-radius: 10px;
+}
+.create .coption ul li:hover {
+    background-color: #cfcece;
+}
+@media screen and (max-width:600px) {
+    .navigation-bottom {
+        display: flex;
+        position: fixed;
+        width: 100vw;
+        top: 94%;
+        
+    }
+    .card {
+        background-repeat: no-repeat;
+    }
+    
+    .card img {
+        background-repeat: 15px;
+    }
+    .navigation-top {
+        display: none;
+    }
+    :root {
+        --card_width: 150px;
+        --row_increment: 10px;
+        --card_border_radius: 16px;
+        --card_small: 15;
+        --card_med: 20;
+        --card_large: 25;
+    }
+    .main .bottom .link, .main .top  {
+        font-size: 50%
+    }
+    .question {
+        display: none;
+    }
+    
+}
+
+.pin_container {
+    margin: 0;
+    padding: 0;
+    width: 98vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+    margin-top: 50px;
+}
+.card {
+    padding: 0;
+    margin: 5px 5px;
+    border-radius: var(--card_border_radius);
+    overflow: hidden;
+    
+}
+.card_small {
+    grid-row-end: span var(--card_small);
+}
+.card_medium {
+    grid-row-end: span var(--card_med);
+}
+.card_large {
+    grid-row-end: span var(--card_large);
+}
+/* .card {
+    overflow: hidden;
+} */
+
+.card {
+    background-size: 100%;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card .top {
+    display: flex;
+    padding: 15px;
+    color: white;
+    font-size: 80%;
+    font-weight: 100;
+    gap: 79px;
+    display: none;
+}
+
+.card .top button {
+    border: none;
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+}
+.card:hover .top  {
+display: flex;
+}
+
+.card:hover .bottom {
+    display: flex;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.card .bottom .link {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+.card .bottom .link  i {
+    margin-right: 5px;
+    
+}
+.card .bottom .link a {
+    text-decoration: none;
+    color: black;
+}
+.card:hover .main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.card .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 15px;
+    display: none;
+}
+.card .bottom .dots, .upload {
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.dots h2 {
+    margin-bottom: 10px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.botom-circle {
+    position: absolute;
+    top: 85%;
+    /* left: 88%; */
+    right: 10%;
+}
+.question {
+    background-color: #fff;
+    padding: 20px 28px;
+    font-size: 200%;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.345);
+    position: fixed;
+}
